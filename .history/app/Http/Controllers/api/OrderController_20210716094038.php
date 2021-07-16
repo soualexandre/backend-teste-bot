@@ -4,7 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Budget;
+use App\Models\Order;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
@@ -16,7 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $budget = Budget::all()->toJson();
+        $budget = Order::orderBy('id', 'DESC')->paginate(10)->toJson();
         return $budget;
     }
 
@@ -38,8 +38,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all();
-        dd($dados);
+        //
     }
 
     /**

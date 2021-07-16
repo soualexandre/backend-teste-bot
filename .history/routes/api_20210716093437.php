@@ -19,4 +19,3 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('budget', 'App\Http\Controllers\api\OrderController@index');
-Route::post('budget/create', 'App\Http\Controllers\api\OrderController@store');

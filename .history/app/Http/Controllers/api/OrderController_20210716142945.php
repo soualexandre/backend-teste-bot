@@ -16,7 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $budget = Budget::all()->toJson();
+        $budget = Budget::orderBy('id', 'DESC')->paginate(10)->toJson();
         return $budget;
     }
 
@@ -38,8 +38,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all();
-        dd($dados);
+        //
     }
 
     /**

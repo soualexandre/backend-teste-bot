@@ -38,8 +38,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $dados = $request->all();
-        dd($dados);
+        //
     }
 
     /**
