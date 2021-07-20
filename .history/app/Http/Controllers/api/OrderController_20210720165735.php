@@ -75,7 +75,7 @@ class OrderController extends Controller
     {
         $budget = Budget::find($id);
         $response = $budget->update($request->all());
-        return response($response);
+        return response($response)
     }
 
     /**

@@ -20,5 +20,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('budget', 'App\Http\Controllers\api\OrderController@index');
 Route::post('budget/create', 'App\Http\Controllers\api\OrderController@store');
-Route::delete('budget/delete/{id}', 'App\Http\Controllers\api\OrderController@destroy');
-Route::post('budget/update/{id}', 'App\Http\Controllers\api\OrderController@update');

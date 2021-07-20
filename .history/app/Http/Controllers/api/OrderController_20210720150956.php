@@ -16,7 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-       return $budget = Budget::orderBy('id', 'DESC')->get();
+       return $budget = Budget::all();
     }
 
     /**
@@ -38,8 +38,8 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $dados = $request->all();
-        $response = Budget::create($dados);
-        return response($response);
+        Budget::create($dados);
+        return response($dados)
     }
 
     /**
@@ -73,9 +73,7 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $budget = Budget::find($id);
-        $response = $budget->update($request->all());
-        return response($response);
+        //
     }
 
     /**
@@ -86,9 +84,6 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        $budget = Budget::find($id);
-        $budget->delete();
-        $response = Budget::all();
-        return response($response);
+        //
     }
 }
