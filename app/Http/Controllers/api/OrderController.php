@@ -17,7 +17,7 @@ class OrderController extends Controller
     public function index()
     {
         $budget = Budget::all()->toJson();
-        return $budget;
+        dd($budget);
     }
 
     /**
