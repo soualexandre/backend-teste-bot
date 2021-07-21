@@ -6,6 +6,8 @@
 
     - Laravel 8
     - php 7.4
+    - Xampp
+    - MySql
     
 ## Installation
 
